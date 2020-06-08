@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.intelligencecommunity.maincode.mapper.AdminMapper">
+    <!--根据业主id获取业主所有信息-->
+    <select id="getOwnerMsgById" parameterType="String" resultType="com.intelligencecommunity.maincode.entitys.TbOwner">
+        select * from tb_owner where owner_id=#{String};
+    </select>
+    <!--更改某业主的物业费余额-->
+    <update id="payAdministrative" parameterType="String">
+        update tb_owner set owner_money=(owner_money+#{payMoney}) where owner_id=#{ownerId}
+    </update>
+</mapper>

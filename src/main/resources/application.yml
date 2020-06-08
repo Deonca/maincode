@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://59.110.140.91:3306/CommunityProjects
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: mysql123
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
