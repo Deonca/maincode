@@ -15,6 +15,7 @@ public class AdminServiceImp implements AdminService {
     @Autowired
     private AdminMapper adminMapper;
 
+//撒创价吧
     @Override
     public TbOwner getOwnerMsgById(String ownerID) {
         TbOwner tbOwner=adminMapper.getOwnerMsgById(ownerID);
